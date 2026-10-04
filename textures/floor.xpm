@@ -1,0 +1,90 @@
+/* XPM */
+static char *floor_metal_neon_64x64[] = {
+"64 64 21 1",
+"  c #0A0D11", /* Ombre la plus sombre (structure) */
+". c #1B222B", /* Base biseau sombre */
+"X c #222A33", /* Métal sombre */
+"o c #2A333E", /* Métal moyen brossé 1 */
+"O c #323D4A", /* Métal moyen brossé 2 */
+"+ c #3A4756", /* Métal clair brossé 1 */
+"@ c #465363", /* Métal clair brossé 2 */
+"# c #505F71", /* Reflet métal 1 */
+"$ c #5E6F81", /* Reflet métal 2 (très clair) */
+"% c #1A3E4D", /* Glow cyan très sombre */
+"& c #1B5867", /* Glow cyan sombre */
+"* c #1D7382", /* Cyan moyen */
+"= c #208E9C", /* Cyan vif */
+"- c #24A9B8", /* Cyan très vif */
+"; c #28C5D3", /* Coeur néon 1 */
+": c #A9F1FF", /* Coeur néon 2 (blanc-cyan) */
+"> c #2E3338", /* Rivet sombre */
+", c #3C4248", /* Rivet moyen */
+"< c #252A30", /* Gravure structurelle (mur) */
+"1 c #14181E", /* Biseau interne dalles */
+"2 c #0E1114", /* Ligne de séparation dalles */
+/* Pixels - 64 lines */
+"2222222222222222222222222222222222222222222222222222222222222222",
+"2111111111111111111111111111111111111111111111111111111111111112",
+"21XXXXXXoooO+++++++++++++++@@@@@@@@@@@@@@@@@++++++++oooooXXX1X12",
+"21XXXXXoooO+++++++++++++++++@@@@@@@@@@@@@@@@+++++++++ooooXXXXX12",
+"21XXXXooooO+++++++++++++++++@@@@@@@@@@@@@@@@+++++++++ooooXXXXX12",
+"21XXXXooooO+++++++++++++++<X<<<<<<X<+++++++++++++++oooooXXXXXX12",
+"21XXXoooooO++++++++++++++<XX<<<<<<XX<+++++++++++++oooooXXXXXXX12",
+"21XXooooooO+++++++++++++<XX<oooooo<XX<+++++++++++++oooooXXXXXX12",
+"21Xo>,,,>oOOOOOOOOOOOOOO<X<oo>,,,>oo<X<OOOOOOOOOOOOOOO>,,,>oXX12",
+"21ooooooooooOOOOOOOOOOOO<X<oooooooooo<X<OOOOOOOOOOOOoooooooooo12",
+"21ooooooooooOOOOOOOOOOOO<X<oooooooooo<X<OOOOOOOOOOOOoooooooooo12",
+"21oooooooOOOOOOO++++++++<XX<++++++++<XX<++++++++OOOOOOOOoooooo12",
+"21ooooOOOOOOOO++++++++++<XX<<<<<<<<<<XX<++++++++++OOOOOOOOoooo12",
+"21ooOOOOOOOOO+++++++++++<X<<<<<<<<<<<<X<+++++++++++OOOOOOOOOoo12",
+"21oOOOOOOOOOO++++++++++++<<<<<<<<<<<<<<++++++++++++OOOOOOOOOoo12",
+"21OOOOOOOOO+++++++++++++++<<<<<<<<<<<<+++++++++++++++OOOOOOOOO12",
+"21O+++++++++++++@@@@@@@<XX<<<<<<<<<<<<XX<@@@@@@++++++++++++++O12",
+"21>,,,>OO@@@@@@@@@@@@@<XX<oo>,,,>oo<XX<@@@@@@@@@@@@OO>,,,>+++12",
+"21O++@@@@@@@@@@@@@@@@<XX<oooooooooooo<XX<@@@@@@@@@@@@@@++O+++12",
+"21+@@@@@@@@@@@@@@@@@<XX<oooooooooooooo<XX<@@@@@@@@@@@@@@@++++12",
+"21@@@@@@@@@@@@@@@@@<XX<oooooooooooooooo<XX<@@@@@@@@@@@@@@@@++12",
+"21@@@@@@@@@@@@@####<<<<oooooooooooooooo<<<<####@@@@@@@@@@@@@@@12",
+"21@@@@@@@@@@@######<<<<<<<<<<<<<<<<<<<<<<<<######@@@@@@@@@@@@@12",
+"21%&&&&&&&&&&*******=======-------=======*******&&&&&&&&&&%@@@12",
+"21&&&&&&&*******=======-------;-------=======*******&&&&&&&@@@12",
+"21&&&*******=======-------;;;;:;;;;-------=======*******&&&@@@12",
+"21*******=======-------;;;;:::::::;;;;-------=======*******@@@12",
+"21=======-------;;;;;;;;:::::;;:::::;;;;;;;;-------=======@@@@12",
+"21-------;;;;;;;;:::::::::::;--;:::::::::::;;;;;;;;-------@@@@12",
+"21=======-------;;;;;;;;:::::;;:::::;;;;;;;;-------=======@@@@12",
+"21*******=======-------;;;;:::::::;;;;-------=======*******@@@12",
+"21&&&*******=======-------;;;;:;;;;-------=======*******&&&@@@12",
+"21&&&&&&&*******=======-------;-------=======*******&&&&&&&@@@12",
+"21%&&&&&&&&&&*******=======-------=======*******&&&&&&&&&&%@@@12",
+"21@@@@@@@@@@@######<<<<<<<<<<<<<<<<<<<<<<<<######@@@@@@@@@@@@@12",
+"21@@@@@@@@@@@@@####<<<<oooooooooooooooo<<<<####@@@@@@@@@@@@@@@12",
+"21@@@@@@@@@@@@@@@@@<XX<oooooooooooooooo<XX<@@@@@@@@@@@@@@@@++12",
+"21+@@@@@@@@@@@@@@@<XX<oooooooooooooooooo<XX<@@@@@@@@@@@@@@@+++12",
+"21O++@@@@@@@@@@@@<XX<oooooooooooooooooooo<XX<@@@@@@@@@@@@++O++12",
+"21>,,,>OO@@@@@@@<XX<oo>,,,>oo<XX<oo>,,,>oo<XX<@@@@@@@OO>,,,>+++12",
+"21O+++++++++++++<XX<<<<<<<<<<<<XX<<<<<<<<<<<<XX<++++++++++++++O12",
+"21OOOOOOOOO+++++++<<<<<<<<<<<<<<<<<<<<<<<<<<<<+++++++OOOOOOOOO12",
+"21oOOOOOOOOOO++++++++++++<<<<<<<<<<<<<<++++++++++++OOOOOOOOOoo12",
+"21ooOOOOOOOOO+++++++++++<X<<<<<<<<<<<<X<+++++++++++OOOOOOOOOoo12",
+"21ooooOOOOOOOO++++++++++<XX<<<<<<<<<<XX<++++++++++OOOOOOOOoooo12",
+"21oooooooOOOOOOO++++++++<XX<++++++++<XX<++++++++OOOOOOOOoooooo12",
+"21ooooooooooOOOOOOOOOOOO<X<oooooooooo<X<OOOOOOOOOOOOoooooooooo12",
+"21ooooooooooOOOOOOOOOOOO<X<oooooooooo<X<OOOOOOOOOOOOoooooooooo12",
+"21Xo>,,,>oOOOOOOOOOOOOOO<X<oo>,,,>oo<X<OOOOOOOOOOOOOOO>,,,>oXX12",
+"21XXooooooO+++++++++++++<XX<oooooo<XX<+++++++++++++oooooXXXXXX12",
+"21XXXoooooO++++++++++++++<XX<<<<<<XX<+++++++++++++oooooXXXXXXX12",
+"21XXXXooooO+++++++++++++++<X<<<<<<X<+++++++++++++++oooooXXXXXX12",
+"21XXXXooooO+++++++++++++++++@@@@@@@@@@@@@@@@+++++++++ooooXXXXX12",
+"21XXXXXoooO+++++++++++++++++@@@@@@@@@@@@@@@@+++++++++ooooXXXXX12",
+"21XXXXXXoooO+++++++++++++++@@@@@@@@@@@@@@@@@++++++++oooooXXX1X12",
+"21XXXXXXXoooOOOOOOOOOOOOOO@@@@@@@@@@@@@@@@@OOOOOOOOOOoooooXXXX12",
+"21>,,,>oooOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO>,,,>XX12",
+"21XXXXooooooooooOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOoooooooooo12",
+"21XXXXooooooooooOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOoooooooooo12",
+"2111111111111111111111111111111111111111111111111111111111111112",
+"2222222222222222222222222222222222222222222222222222222222222222",
+"XXXXXXXOOOOOO@@@@@#####$$$$$#####@@@@@OOOOOOXXXXXXX",
+"&&******======------======------======******&&",
+"------======------======------======------------"
+};

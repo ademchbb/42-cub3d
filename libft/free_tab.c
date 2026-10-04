@@ -1,0 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   free_tab.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/11 11:28:14 by adchebbi          #+#    #+#             */
+/*   Updated: 2026/06/11 11:29:13 by adchebbi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/* Libere un tableau de chaines et le tableau lui-meme */
+void	free_tab(char **tab)
+{
+	int	i;
+
+	i = 0;
+	while (tab && tab[i])
+		free(tab[i++]);
+	free(tab);
+}
