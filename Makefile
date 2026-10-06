@@ -6,25 +6,22 @@
 #    By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/08/11 17:31:40 by ragolden          #+#    #+#              #
-#    Updated: 2026/10/06 18:56:04 by adchebbi         ###   ########.fr        #
+#    Updated: 2026/10/06 20:33:07 by adchebbi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# ==== CONFIG ====
 NAME		= cub3D
 NAME_BONUS	= cub3D_bonus
 
 CC			= cc
 CFLAGS		= -Wall -Wextra -Werror -Wno-cast-function-type -g3
 
-# ==== DIRS ====
 SRCS_DIR	= srcs
 INCS_DIR	= includes
 LIBFT_DIR	= libft
 MLX_DIR		= mlx
 OBJS_DIR	= objs
 
-# ==== FILES ====
 SRCS_COMMON	= main.c \
 			  init_mlx.c \
 			  cleanup.c \
@@ -61,7 +58,6 @@ OBJS_BONUS	= $(addprefix $(OBJS_DIR)/, $(SRCS_BONUS:.c=.o))
 
 HEADERS		= $(INCS_DIR)/cub3d.h $(INCS_DIR)/cub3d_bonus.h
 
-# ==== LIBS ====
 LIBFT		= $(LIBFT_DIR)/libft.a
 MLX_LIB		= $(MLX_DIR)/libmlx.a
 
@@ -71,7 +67,6 @@ LIBS		= -L $(LIBFT_DIR) -lft \
 			  -L $(MLX_DIR) -lmlx \
 			  -lXext -lX11 -lm
 
-# ==== RULES ====
 all: $(NAME)
 
 bonus: $(NAME_BONUS)

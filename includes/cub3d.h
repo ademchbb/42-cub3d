@@ -6,7 +6,7 @@
 /*   By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/11 15:32:10 by ragolden          #+#    #+#             */
-/*   Updated: 2026/10/06 19:15:34 by adchebbi         ###   ########.fr       */
+/*   Updated: 2026/10/06 20:27:42 by adchebbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@
 # define KEY_LEFT 65361
 # define KEY_RIGHT 65363
 # define MOVE_SPEED 0.01
-# define ROTATION_SPEED 0.03
+# define ROTATION_SPEED 0.01
 # define WIN_TITLE "cub3D"
 
 typedef struct s_image

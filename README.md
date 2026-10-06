@@ -35,6 +35,7 @@ make        # builds the cub3D executable
 make clean  # removes object files
 make fclean # removes object files and the executable
 make re     # rebuilds everything from scratch
+make bonus	# builds the bonus executable
 ```
 
 The Makefile compiles the project's own sources, the bundled `libft`, and
@@ -44,6 +45,7 @@ the bundled MinilibX library, then links everything together.
 
 ```sh
 ./cub3D maps/<your_map>.cub
+./cub3D_bonus maps/<your_map>.cub
 ```
 
 The program takes exactly one argument: a scene description file with the
