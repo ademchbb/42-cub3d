@@ -1,9 +1,0 @@
-cub3D
-cub3D_bonus
-objs/
-*.o
-*.a
-mlx/obj/
-mlx/test/mlx-test
-.vscode/
-*Zone.Identifier

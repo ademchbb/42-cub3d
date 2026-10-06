@@ -6,13 +6,12 @@
 /*   By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 14:01:57 by ragolden          #+#    #+#             */
-/*   Updated: 2026/10/04 10:13:10 by adchebbi         ###   ########.fr       */
+/*   Updated: 2026/10/06 18:49:30 by adchebbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-/* Met les chemins a NULL et les couleurs a -1 (pas encore lus) */
 static void	init_config(t_config *config)
 {
 	config->path_north = NULL;
@@ -23,7 +22,6 @@ static void	init_config(t_config *config)
 	config->ceiling_color = -1;
 }
 
-/* Vrai si la ligne commence par l'identifiant id suivi d'un espace */
 static int	is_id(char *line, char *id)
 {
 	int	len;
@@ -32,7 +30,6 @@ static int	is_id(char *line, char *id)
 	return (ft_strncmp(line, id, len) == 0 && line[len] == ' ');
 }
 
-/* Envoie la ligne vers la bonne fonction selon son identifiant */
 static int	assign_config_line(t_config *config, char *line)
 {
 	while (*line == ' ')
@@ -52,7 +49,6 @@ static int	assign_config_line(t_config *config, char *line)
 	return (print_error("Unknown identifier (use NO, SO, WE, EA, F, C)"));
 }
 
-/* Vrai si les 6 elements (NO, SO, WE, EA, F, C) ont ete trouves */
 static int	complete_config(t_config *config)
 {
 	if (!config->path_north || !config->path_south || !config->path_west
@@ -62,7 +58,6 @@ static int	complete_config(t_config *config)
 	return (1);
 }
 
-/* Lit toutes les lignes avant la map et remplit la configuration */
 int	parse_config(char **lines, int map_start, t_config *config)
 {
 	int	i;

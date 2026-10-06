@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotation.c                                         :+:      :+:    :+:   */
+/*   roatation.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ragolden <ragolden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 11:40:28 by ragolden          #+#    #+#             */
-/*   Updated: 2026/10/04 10:13:35 by adchebbi         ###   ########.fr       */
+/*   Updated: 2026/09/11 11:53:03 by ragolden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-/* Tourne la direction du regard et le plan camera vers la gauche */
 void	rotate_left(t_player *player)
 {
 	double	old_dir_x;
@@ -30,7 +29,6 @@ void	rotate_left(t_player *player)
 		* cos(-ROTATION_SPEED);
 }
 
-/* Tourne la direction du regard et le plan camera vers la droite */
 void	rotate_right(t_player *player)
 {
 	double	old_dir_x;

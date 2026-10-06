@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   raycast_render.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ragolden <ragolden@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 13:42:03 by ragolden          #+#    #+#             */
-/*   Updated: 2026/09/18 18:44:01 by ragolden         ###   ########.fr       */
+/*   Updated: 2026/10/06 19:11:10 by adchebbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-/* Hauteur du mur a l'ecran et lignes de debut et de fin de la colonne */
+/* Hauteur du mur a l'ecran et lignes de debut et de fin de la colonne*/
 static void	help_to_calc(t_ray *ray)
 {
 	ray->line_height = (int)(WIN_HEIGHT / ray->perp_wall_dist);
@@ -24,7 +24,7 @@ static void	help_to_calc(t_ray *ray)
 		ray->draw_end = WIN_HEIGHT - 1;
 }
 
-/* Dessine la colonne de mur pixel par pixel avec la texture */
+/* Desine la colonne de mur pixel par pixel avec la texture*/
 static void	draw_textured_col(t_game *game, t_ray *ray, int x, int draw_start)
 {
 	t_texture	*texture;
@@ -46,14 +46,14 @@ static void	draw_textured_col(t_game *game, t_ray *ray, int x, int draw_start)
 	}
 }
 
-/* Calcule puis dessine la colonne de mur x */
+/* Calcule puis dessine la colonne de mur x*/
 static void	draw_wall_col(t_game *game, t_ray *ray, int x)
 {
 	help_to_calc(ray);
 	draw_textured_col(game, ray, x, ray->draw_start);
 }
 
-/* Lance un rayon par colonne de l'ecran et dessine les murs */
+/* Lance un rayon par colonne de l'ecran et dessine les murs*/
 void	render_wall_col(t_game *game, t_map *map, t_player *player, t_ray *ray)
 {
 	int	x;

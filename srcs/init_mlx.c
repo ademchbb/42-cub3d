@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   init_mlx.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ragolden <ragolden@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/11 17:13:47 by ragolden          #+#    #+#             */
-/*   Updated: 2026/09/23 12:50:26 by ragolden         ###   ########.fr       */
+/*   Updated: 2026/10/06 18:22:04 by adchebbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-/* Initialise la connexion MLX et ouvre la fenetre du jeu */
 void	init_mlx_co(t_game *game)
 {
 	game->mlx_connexion = mlx_init();
@@ -30,7 +29,6 @@ void	init_mlx_co(t_game *game)
 	}
 }
 
-/* Cree l'image de travail dans laquelle on dessine chaque frame */
 void	init_img(t_game *game)
 {
 	game->frame.image_ptr = mlx_new_image(game->mlx_connexion, WIN_WIDTH,

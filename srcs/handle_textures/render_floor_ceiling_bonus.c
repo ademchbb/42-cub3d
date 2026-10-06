@@ -6,7 +6,7 @@
 /*   By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 12:48:50 by ragolden          #+#    #+#             */
-/*   Updated: 2026/10/03 14:15:42 by adchebbi         ###   ########.fr       */
+/*   Updated: 2026/10/06 18:54:30 by adchebbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ void	draw_floor_line(t_game *game, t_tex_floor *f, int y)
 	}
 }
 
-/* Dessine le sol et le plafond textures, ligne par ligne */
 void	render_floor_ceiling(t_game *game)
 {
 	t_tex_floor	floor;

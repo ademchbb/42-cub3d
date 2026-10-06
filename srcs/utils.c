@@ -5,14 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/03 13:55:06 by adchebbi          #+#    #+#             */
-/*   Updated: 2026/10/04 10:12:07 by adchebbi         ###   ########.fr       */
+/*   Created: 2026/10/06 17:31:51 by adchebbi          #+#    #+#             */
+/*   Updated: 2026/10/06 19:07:38 by adchebbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-/* Affiche Error puis le message sur la sortie d'erreur, renvoie -1 */
 int	print_error(char *msg)
 {
 	ft_putstr_fd("Error\n", 2);
@@ -20,7 +19,6 @@ int	print_error(char *msg)
 	return (-1);
 }
 
-/* Vrai si le nom du fichier se termine par l'extension ext */
 int	has_extension(char *path, char *ext)
 {
 	int	len;
@@ -33,7 +31,6 @@ int	has_extension(char *path, char *ext)
 	return (ft_strncmp(path + len - ext_len, ext, ext_len + 1) == 0);
 }
 
-/* Compte le nombre de fois ou le caractere c apparait dans str */
 int	count_char(char *str, char c)
 {
 	int	count;

@@ -6,13 +6,12 @@
 /*   By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 18:56:43 by ragolden          #+#    #+#             */
-/*   Updated: 2026/10/03 15:19:33 by adchebbi         ###   ########.fr       */
+/*   Updated: 2026/10/06 18:51:34 by adchebbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-/* Touche enfoncee : ESC quitte, sinon active le booleen de la touche */
 int	handle_keypress(int keycode, t_game *game)
 {
 	if (keycode == KEY_ESC)
@@ -32,7 +31,6 @@ int	handle_keypress(int keycode, t_game *game)
 	return (0);
 }
 
-/* Touche relachee : desactive le booleen de la touche */
 int	handle_keyrelease(int keycode, t_game *game)
 {
 	if (keycode == KEY_W)
@@ -49,7 +47,7 @@ int	handle_keyrelease(int keycode, t_game *game)
 		game->key_right = false;
 	return (0);
 }
-/*TODO verifier si on garde (empecher le maintien de touche en cas de changement de page)
+
 int	handle_focus_out(t_game *game)
 {
 	game->key_w = false;
@@ -59,4 +57,4 @@ int	handle_focus_out(t_game *game)
 	game->key_left = false;
 	game->key_right = false;
 	return (0);
-}*/
+}

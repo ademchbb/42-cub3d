@@ -6,7 +6,7 @@
 /*   By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/11 15:32:10 by ragolden          #+#    #+#             */
-/*   Updated: 2026/10/03 15:58:32 by adchebbi         ###   ########.fr       */
+/*   Updated: 2026/10/06 19:15:34 by adchebbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,7 +143,6 @@ char			**read_file_lines(char *filepath);
 char			**add_line_to_array(char **lines, char *line, int count);
 int				empty_line(char *line);
 int				find_map_start(char **lines);
-void			free_split(char **arr);
 int				parse_config(char **lines, int map_start, t_config *config);
 int				parse_color(char *line);
 int				assign_path(char **field, char *line);
@@ -177,7 +176,7 @@ void			render_wall_col(t_game *game, t_map *map, t_player *player,
 /* ==== MOVEMENT ==== */
 int				handle_keypress(int keycode, t_game *game);
 int				handle_keyrelease(int keycode, t_game *game);
-/// TODO enlever si pas utilise int				handle_focus_out(t_game *game);
+int				handle_focus_out(t_game *game);
 int				is_walkable_cell(t_map *map, double x, double y);
 int				move_to(t_map *map, double x, double y);
 void			move_forward(t_player *player, t_map *map);

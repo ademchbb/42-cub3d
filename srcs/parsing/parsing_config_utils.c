@@ -6,14 +6,13 @@
 /*   By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 13:30:53 by ragolden          #+#    #+#             */
-/*   Updated: 2026/10/04 10:13:06 by adchebbi         ###   ########.fr       */
+/*   Updated: 2026/10/06 18:59:24 by adchebbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-/* Convertit un morceau de couleur en nombre de 0 a 255 (-1 si invalide) */
-static int	parse_component(char *str)
+static int	parse_rgb(char *str)
 {
 	char	*nb;
 	int		value;
@@ -50,12 +49,12 @@ int	parse_color(char *line)
 	i = 0;
 	while (i < 3 && parts[i])
 	{
-		rgb[i] = parse_component(parts[i]);
+		rgb[i] = parse_rgb(parts[i]);
 		if (rgb[i] == -1)
-			return (free_split(parts), -1);
+			return (free_tab(parts), -1);
 		i++;
 	}
-	free_split(parts);
+	free_tab(parts);
 	if (i != 3)
 		return (-1);
 	return ((rgb[0] << 16) | (rgb[1] << 8) | rgb[2]);

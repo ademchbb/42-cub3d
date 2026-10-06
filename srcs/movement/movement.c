@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   movement.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ragolden <ragolden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 11:08:54 by ragolden          #+#    #+#             */
-/*   Updated: 2026/10/04 10:13:32 by adchebbi         ###   ########.fr       */
+/*   Updated: 2026/09/11 16:54:50 by ragolden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-/* Avance dans la direction du regard (x et y testes separement) */
 void	move_forward(t_player *player, t_map *map)
 {
 	double	new_x;
@@ -26,7 +25,6 @@ void	move_forward(t_player *player, t_map *map)
 		player->pos_y = new_y;
 }
 
-/* Recule a l'oppose du regard (x et y testes separement) */
 void	move_backward(t_player *player, t_map *map)
 {
 	double	new_x;
@@ -40,7 +38,6 @@ void	move_backward(t_player *player, t_map *map)
 		player->pos_y = new_y;
 }
 
-/* Pas de cote vers la gauche (perpendiculaire au regard) */
 void	move_left(t_player *player, t_map *map)
 {
 	double	new_x;
@@ -54,7 +51,6 @@ void	move_left(t_player *player, t_map *map)
 		player->pos_y = new_y;
 }
 
-/* Pas de cote vers la droite (perpendiculaire au regard) */
 void	move_right(t_player *player, t_map *map)
 {
 	double	new_x;

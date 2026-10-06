@@ -5,14 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/03 13:55:06 by adchebbi          #+#    #+#             */
-/*   Updated: 2026/10/03 14:16:35 by adchebbi         ###   ########.fr       */
+/*   Created: 2026/09/18 15:04:31 by ragolden          #+#    #+#             */
+/*   Updated: 2026/10/06 18:55:08 by adchebbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d_bonus.h"
 
-/* Dessine un carre plein de cote size a la position pos */
 static void	draw_square(t_game *game, t_point pos, int size, int color)
 {
 	int	i;

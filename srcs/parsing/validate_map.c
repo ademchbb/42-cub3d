@@ -6,13 +6,12 @@
 /*   By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 14:02:54 by ragolden          #+#    #+#             */
-/*   Updated: 2026/10/04 10:13:22 by adchebbi         ###   ########.fr       */
+/*   Updated: 2026/10/06 18:39:38 by adchebbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-/* Verifie que la map n'a que des caracteres autorises et un seul joueur */
 int	valid_map_chars(t_map *map)
 {
 	int	spawn_count;
@@ -41,7 +40,6 @@ int	valid_map_chars(t_map *map)
 	return (0);
 }
 
-/* Retient la case de depart du joueur et son orientation */
 int	extract_player(t_map *map, t_player *player)
 {
 	int	x;
@@ -67,7 +65,6 @@ int	extract_player(t_map *map, t_player *player)
 	return (-1);
 }
 
-/* Renvoie -1 si une des 4 cases voisines est un espace ou hors map */
 static int	check_spaces(t_map *map, int y, int x)
 {
 	if (get_safe_char(map, y - 1, x) == ' ' || get_safe_char(map, y + 1,
@@ -77,7 +74,6 @@ static int	check_spaces(t_map *map, int y, int x)
 	return (0);
 }
 
-/* Verifie que la map est fermee : aucun 0 ni joueur ne touche le vide */
 int	check_map_walls(t_map *map)
 {
 	int	y;

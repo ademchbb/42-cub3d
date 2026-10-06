@@ -6,13 +6,13 @@
 /*   By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/11 17:25:58 by ragolden          #+#    #+#             */
-/*   Updated: 2026/10/04 10:12:03 by adchebbi         ###   ########.fr       */
+/*   Updated: 2026/10/06 17:39:33 by adchebbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-/* Ecrit un pixel de couleur dans l'image (ignore s'il sort de l'ecran) */
+/* Ecrit un pixel de couleur dans l'image (ignore s'il sort de l'ecran)*/
 void	put_px(t_game *game, int pos_x, int pos_y, int color)
 {
 	int	offset;
@@ -24,7 +24,6 @@ void	put_px(t_game *game, int pos_x, int pos_y, int color)
 	*(unsigned int *)(game->frame.pixels_addr + offset) = color;
 }
 
-/* Appelee a chaque frame : deplace le joueur puis dessine la scene */
 int	render_frames(t_game *game)
 {
 	if (game->key_w)

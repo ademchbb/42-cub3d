@@ -6,7 +6,7 @@
 /*   By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 12:25:15 by ragolden          #+#    #+#             */
-/*   Updated: 2026/10/04 10:13:41 by adchebbi         ###   ########.fr       */
+/*   Updated: 2026/10/06 19:10:37 by adchebbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ static int	load_one_texture(t_game *game, char *path, int i)
 	return (0);
 }
 
-/* Charge les 4 textures des murs (NO, SO, WE, EA) */
 int	load_textures(t_game *game)
 {
 	if (load_one_texture(game, game->config.path_north, 0) == -1)

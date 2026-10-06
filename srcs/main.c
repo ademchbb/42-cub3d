@@ -6,13 +6,13 @@
 /*   By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/11 16:22:24 by ragolden          #+#    #+#             */
-/*   Updated: 2026/10/03 15:19:25 by adchebbi         ###   ########.fr       */
+/*   Updated: 2026/10/06 19:02:04 by adchebbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-/* Lit le .cub puis remplit la config et la map (libere tout si erreur) */
+/* Lit le .cub puis remplit la config et la map (libere tout si erreur)*/
 static int	parse_map(t_game *game, char *file)
 {
 	char	**lines;
@@ -23,14 +23,14 @@ static int	parse_map(t_game *game, char *file)
 		return (-1);
 	start = find_map_start(lines);
 	if (parse_config(lines, start, &game->config) == -1)
-		return (free_split(lines), free_all(game), -1);
+		return (free_tab(lines), free_all(game), -1);
 	if (extract_map(lines, start, &game->map) == -1)
-		return (free_split(lines), free_all(game), -1);
-	free_split(lines);
+		return (free_tab(lines), free_all(game), -1);
+	free_tab(lines);
 	return (0);
 }
 
-/* Verifie la map : caracteres, joueur unique, murs fermes */
+/* Verifie la map : caracters, joueur unique, murs fermes*/
 static int	check_map(t_game *game)
 {
 	if (valid_map_chars(&game->map) == -1)
@@ -42,7 +42,6 @@ static int	check_map(t_game *game)
 	return (0);
 }
 
-/* Valide la map puis place le joueur et regle son orientation */
 static int	init_game(t_game *game)
 {
 	if (check_map(game) == -1)
@@ -52,7 +51,12 @@ static int	init_game(t_game *game)
 	return (0);
 }
 
-/* Ouvre la fenetre, charge les textures et branche les hooks MLX */
+/// @brief OUvre la fenetre, charge les textures et branche les hooks :
+///			17 croix rouge, 2/3 touche enfoncee/relachee, 10 perte du
+///			focus (relache les touches), loop_hook a chaque frame.
+/// @note Cast (int (*)()) : mlx_hook attend ce type de fonction.
+///			Obligatoire, sinon la compilation echoue.
+/// @return 0 si ok, -1 si une texture ne se charge pas.
 static int	init_mlx_hooks(t_game *game)
 {
 	init_mlx_co(game);
@@ -64,12 +68,11 @@ static int	init_mlx_hooks(t_game *game)
 		(int (*)())handle_keypress, game);
 	mlx_hook(game->mlx_window, 3, (1L << 0) | (1L << 1),
 		(int (*)())handle_keyrelease, game);
-	/// TODO enlever si pas utilise mlx_hook(game->mlx_window, 10, 1L << 21, (int (*)())handle_focus_out, game);
+	mlx_hook(game->mlx_window, 10, 1L << 21, (int (*)())handle_focus_out, game);
 	mlx_loop_hook(game->mlx_connexion, (int (*)())render_frames, game);
 	return (0);
 }
 
-/* Verifie les arguments, parse le .cub puis lance la boucle du jeu */
 int	main(int ac, char **av)
 {
 	t_game	game;

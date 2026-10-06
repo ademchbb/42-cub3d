@@ -6,24 +6,23 @@
 /*   By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 12:22:54 by ragolden          #+#    #+#             */
-/*   Updated: 2026/10/03 14:58:43 by adchebbi         ###   ########.fr       */
+/*   Updated: 2026/10/06 19:21:23 by adchebbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-/* Choisit la texture (NO, SO, WE, EA) selon la face du mur touchee */
 int	get_tex_index(t_ray *ray)
 {
 	if (ray->side == 0)
 	{
 		if (ray->ray_dir_x > 0)
-			return (2);
-		return (3);
+			return (3);
+		return (2);
 	}
 	if (ray->ray_dir_y > 0)
-		return (0);
-	return (1);
+		return (1);
+	return (0);
 }
 
 /* Position exacte de l'impact sur le mur, entre 0 et 1 */

@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   raycast_init.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ragolden <ragolden@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adchebbi <adchebbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 11:38:36 by ragolden          #+#    #+#             */
-/*   Updated: 2026/09/15 12:25:25 by ragolden         ###   ########.fr       */
+/*   Updated: 2026/10/06 18:36:17 by adchebbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-/* Regle la direction du regard et le plan camera selon N, S, E ou W */
 void	init_player_dir(t_player *player)
 {
 	if (player->orientation == 'N')
@@ -40,7 +39,7 @@ void	init_player_dir(t_player *player)
 		west_dir(player);
 }
 
-/* Calcule la direction du rayon pour la colonne x de l'ecran */
+/* Calcule la direction du rayon pour la colonne x de l'ecran*/
 void	init_ray_dir(t_player *player, t_ray *ray, int x)
 {
 	double	camera_x;
@@ -50,7 +49,7 @@ void	init_ray_dir(t_player *player, t_ray *ray, int x)
 	ray->ray_dir_y = player->dir_y + player->plane_y * camera_x;
 }
 
-/* Case de depart du rayon et distance pour traverser une case en x/y */
+/* Cade de depart du rayon et distance pour traverser une case en x/y*/
 void	init_ray_dda(t_player *player, t_ray *ray)
 {
 	ray->map_x = player->pos_x;
@@ -65,7 +64,7 @@ void	init_ray_dda(t_player *player, t_ray *ray)
 		ray->delta_dist_y = fabs(1 / ray->ray_dir_y);
 }
 
-/* Sens du pas en x et y et distance jusqu'au premier bord de case */
+/* Sens du pas en x et y et distance jusqu'au premier bord de case*/
 void	init_ray_step(t_player *player, t_ray *ray)
 {
 	if (ray->ray_dir_x < 0)
@@ -92,7 +91,7 @@ void	init_ray_step(t_player *player, t_ray *ray)
 	}
 }
 
-/* Avance le rayon case par case jusqu'a toucher un mur */
+/* Avance le rayon case par case jusqu'a toucher un mur*/
 void	exec_dda(t_map *map, t_ray *ray)
 {
 	int	steps;
