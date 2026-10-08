@@ -5,7 +5,7 @@
 > A first-person raycasting engine in C, in the spirit of *Wolfenstein 3D* (1992): a maze described in a `.cub`
 > file is rendered in real time with the DDA algorithm and the MiniLibX graphics library.
 
-![C](https://img.shields.io/badge/language-C-00599C) ![MiniLibX](https://img.shields.io/badge/graphics-MiniLibX%20%2F%20X11-informational) ![Team](https://img.shields.io/badge/team-2%20people-informational) ![42 Paris](https://img.shields.io/badge/school-42%20Paris-000000)
+![42 score](https://img.shields.io/badge/42%20score-113%2F100-success) ![C](https://img.shields.io/badge/language-C-00599C) ![MiniLibX](https://img.shields.io/badge/graphics-MiniLibX%20%2F%20X11-informational) ![Team](https://img.shields.io/badge/team-2%20people-informational) ![42 Paris](https://img.shields.io/badge/school-42%20Paris-000000)
 
 <p align="center"><img src="assets/bonus.png" alt="cub3D bonus: textured floor and starry ceiling, minimap in the top-left corner" width="820"></p>
 
@@ -138,6 +138,13 @@ Claude (Anthropic) was used throughout this project as a learning and pair-progr
 
 - **Explaining concepts and math**: breaking down the DDA algorithm, the direction/camera plane model and the
   perpendicular wall distance formula into applicable steps, without writing the implementation.
+
+## 42 evaluation
+
+Validated at **113/100** (bonus included) by 3 peer evaluations (team of 2).
+Other students' names and photos are blurred.
+
+<p align="center"><img src="assets/42_evaluation.png" alt="42 intra evaluation page" width="620"></p>
 
 ## Authors
 
