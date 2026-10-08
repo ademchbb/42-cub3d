@@ -1,0 +1,18 @@
+# Build artifacts
+*.o
+*.a
+*.d
+objs/
+
+# Binaries
+/cub3D
+/cub3D_bonus
+
+# MiniLibX (cloned automatically by the Makefile)
+mlx/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp

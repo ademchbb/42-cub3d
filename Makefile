@@ -71,14 +71,17 @@ all: $(NAME)
 
 bonus: $(NAME_BONUS)
 
-$(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c $(HEADERS)
+$(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c $(HEADERS) | $(MLX_DIR)
 	mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 $(LIBFT):
 	$(MAKE) -C $(LIBFT_DIR)
 
-$(MLX_LIB):
+$(MLX_DIR):
+	git clone https://github.com/42Paris/minilibx-linux.git $(MLX_DIR)
+
+$(MLX_LIB): | $(MLX_DIR)
 	chmod +x $(MLX_DIR)/configure
 	$(MAKE) -C $(MLX_DIR)
 
